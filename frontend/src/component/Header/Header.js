@@ -200,9 +200,9 @@ function Header() {
                 onClick={() => navigate("/cart")}
               >
                 <Badge
-                  badgeContent={carts.length}
+                  badgeContent={carts?.length}
                   color="primary"
-                  invisible={!carts.length}
+                  invisible={!carts?.length}
                 >
                   <IoCartOutline />
                 </Badge>
@@ -210,7 +210,7 @@ function Header() {
 
               <div>
                 <div
-                  className=" text-[20px]  cursor-pointer p-[10px]  max-[426px]:text-[15px] "
+                  className=" text-[20px]  cursor-pointer px-[10px]  max-[426px]:text-[15px] "
                   onClick={() => navigate("/account")}
                 >
                   {userIsAuthorize ? (
@@ -219,7 +219,11 @@ function Header() {
                     //   alt=""
                     //   className=" h-[40px]   "
                     // />
-                    <Avatar alt="Remy Sharp" src={user?.user?.avatar?.url} />
+                    <Avatar
+                      alt="Remy Sharp"
+                      src={user?.user?.avatar?.url}
+                      className="w-[30px]  h-[30px]"
+                    />
                   ) : (
                     <CgProfile />
                   )}

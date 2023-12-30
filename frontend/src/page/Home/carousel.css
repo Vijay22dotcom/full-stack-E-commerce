@@ -1,0 +1,14 @@
+.react-multi-carousel-item{
+    background: rgb(243 244 246);
+    padding: 70px 30px ;
+    margin-right: 10px;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .react-multi-carousel-item{
+        background: rgb(243 244 246);
+        padding: 30px 15px ;
+        margin-right: 10px;
+    }
+  }
