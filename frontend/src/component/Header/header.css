@@ -1,0 +1,24 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(110%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0%);
+    }
+}
+
+
+
+.menu {
+    display: none;
+    animation: fadeIn  .5s  ;
+}
+
+.menu.active {
+    display: block;
+   
+    animation: fadeIn  .5s  ;
+}
+
