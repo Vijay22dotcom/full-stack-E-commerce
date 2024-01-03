@@ -196,7 +196,7 @@ function Header() {
               </div> */}
 
               <div
-                className=" text-[30px] cursor-pointer mr-[10px] mt-[-10px] max-[426px]:text-[18px] "
+                className=" text-[30px] cursor-pointer mr-[10px] mt-[-10px]  max-[500px]:text-[25px] "
                 onClick={() => navigate("/cart")}
               >
                 <Badge
@@ -210,7 +210,7 @@ function Header() {
 
               <div>
                 <div
-                  className=" text-[20px]  cursor-pointer px-[10px]  max-[426px]:text-[15px] "
+                  className=" text-[20px]  cursor-pointer px-[10px]   max-[500px]:hidden"
                   onClick={() => navigate("/account")}
                 >
                   {userIsAuthorize ? (

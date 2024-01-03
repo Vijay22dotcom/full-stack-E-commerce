@@ -6,7 +6,8 @@ import "react-multi-carousel/lib/styles.css";
 import { useDispatch, useSelector } from "react-redux";
 import img1 from "../../images/hero-ection-2.webp";
 import img2 from "../../images/hero2.jpeg";
-import img3 from "../../images/hero-ection-2.webp";
+import img3 from "../../images/hero3.jpg";
+import img4 from "../../images/hero3.webp";
 import {
   categoryList,
   fetchProductsCategoryList,
@@ -14,7 +15,7 @@ import {
 import CategoryShowBlock from "./categoryShow";
 
 const Home = () => {
-  const images = [img1, img2, img3];
+  const images = [img1, img2, img3, img4];
   const productCategory = useSelector(categoryList);
   const dispatch = useDispatch();
   useEffect(() => {
