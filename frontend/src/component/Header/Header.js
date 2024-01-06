@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaBars } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import Search from "../search/Search";
@@ -37,7 +37,8 @@ import { useAlert } from "../../contex/alert/AlertContex";
 function Header() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const carts = JSON.parse(localStorage.getItem("cart"));
-
+  const location = useLocation();
+  const activeTab = location.pathname;
   const dispatch = useDispatch();
   const isSearchOpen = useSelector((state) => state.search.isSearchOpen);
   const keywords = useSelector((state) => state.search.keyword);
@@ -116,19 +117,23 @@ function Header() {
               className="text-3xl max-md:text-xl font-semibold cursor-pointer "
               onClick={() => navigate("/")}
             >
-              LOGO
+              <p className=" text-[20px] uppercase text-transparent  bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+                vr
+              </p>
             </div>
 
             <div className="hidden sm:flex space-x-4  ">
               <ul className="flex space-x-4 items-center ">
                 {navIteam.map((iteam) => (
                   <li key={iteam.name}>
-                    <Link className="hover:text-gray-300" to={iteam.slug}>
+                    <Link
+                      className={`${
+                        iteam.slug === activeTab ? "text-[#B0C4DE]" : ""
+                      } hover:text-gray-300`}
+                      to={iteam.slug}
+                    >
                       {iteam.name}
                     </Link>
-                    {/* <button to="#" className="hover:text-gray-300">
-                  {iteam.name}
-                </button> */}
                   </li>
                 ))}
                 {user?.user?.role === "admin" && (
