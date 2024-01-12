@@ -141,9 +141,9 @@ const SearchProduct = () => {
           <Loading />
         ) : (
           <div
-            className={`w-3/4   max-[500px]:mt-[30px]  bg-white  max-[500px]:${
+            className={`w-3/4   max-[500px]:mt-[50px]  bg-white  max-[500px]:${
               !ShowFilterBox ? "w-[100%]" : "w-[49%]"
-            }    max-[500px]:m-auto`}
+            }    max-[500px]:m-auto   max-[500px]:ml-[10px]`}
           >
             {products.length === 0 ? (
               <h1 className="text-5xl font-semibold grid items-center text-gray-300 text-center h-[100%] m-auto ">
